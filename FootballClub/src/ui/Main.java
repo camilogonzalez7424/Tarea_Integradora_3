@@ -1,12 +1,12 @@
 package ui;
 import java.util.Scanner;
+import model.Club;
 
 public class Main {
-    Scanner sc;
+	Scanner sc;
 	
 	Main(){
         sc = new Scanner(System.in);
-		
     }
     
 	public static void main(String[] args) {
@@ -28,12 +28,12 @@ public class Main {
 		int option=0;
 
 		System.out.println(
-				"Main menu, please pick an option\n" +
+				"Menú principal, seleccione la opción que guste\n" +
 				"(1)  \n" +
 				"(2)  \n"+
 				"(3)  \n"+
 				"(4)  \n" +  
-				"(0) To leave the application"
+				"(0)  Para salir de la aplicación"
 				);
 		option= sc.nextInt();
 		sc.nextLine();
@@ -60,7 +60,7 @@ public class Main {
 			break;
 		
 		default:
-			System.out.println("Error, wrong option");
+			System.out.println("Error, opción no válida");
 		
 		}
 	
