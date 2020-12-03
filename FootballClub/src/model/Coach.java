@@ -12,5 +12,22 @@ public abstract class Coach extends Employee{
         super(name, identificator, salary);
         this.experience = experience;
     }
+
+    //Getters and Setters.
+
+    public int getExperience() {
+        return experience;
+    }
+
+    public void setExperience(int experience) {
+        this.experience = experience;
+    }
+
+    @Override
+    public String toString(){
+        String message=super.toString();
+            return message;
+        }
+    
     
 }
