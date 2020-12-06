@@ -34,17 +34,20 @@ public class Main {
 		int option=0;
 
 		System.out.println(
-				"Menú principal, seleccione la opción que guste\n" +
-				"(1) Para contratar un empleado\n" +
-				"(2) Para mostrar la informacion de todos los empleados en el Club\n"+
-				"(3) Para mostrar la información de un empleado especifico\n"+
-				"(4) Para despedir un empleado \n" +
-				"(5) Para mostrar la información del club\n"+  
-				"(6) Para ubicar a los entrenadores en las oficinas\n"+  
-				"(7) Para mostrar las oficinas\n"+  
-				"(8) createlineup()\n"+  
-				"(9) showLineup()\n"+  
-				"(0)  Para salir de la aplicación"
+				"Menú principal, seleccione la opción que guste\n\t" +
+				"(1) Para contratar un empleado\n\t" +
+				"(2) Para mostrar la informacion de todos los empleados en el Club\n\t"+
+				"(3) Para mostrar la información de un empleado especifico\n\t"+
+				"(4) Para despedir un empleado \n\t" +
+				"(5) Para mostrar la información del club\n\t"+  
+				"(6) Para ubicar a los entrenadores en las oficinas\n\t"+  
+				"(7) Para mostrar las oficinas\n\t"+  
+				"(8) Para ubicar a los jugadores en los camerinos\n\t"+  
+				"(9) Para mostras los camerinos\n\t"+  
+				"(10) Para crear una alineación\n\t"+  
+				"(11) Para mostrar las alineaciones\n\t"+  
+				 "(0)  Para salir de la aplicación\n"+
+	"********************************************************************"
 				);
 		option= sc.nextInt();
 		sc.nextLine();
@@ -79,14 +82,25 @@ public class Main {
 		System.out.println("Los entrenadores fueron ubicados con exito :D\n");
 			break;
 		case 7:
+		System.out.println("OFICINAS: \n");
 		System.out.println(club.showOffice());
 			break;
 		case 8:
-		createlineup();
+		club.locateInTheDressingRooms();
+		System.out.println("Los jugadores fueron ubicados con exito :D\n");
 			break;	
 		case 9:
-			showLineup();	
+		System.out.println("CAMERINOS A: \n");
+		System.out.println(club.showdressingRooms1());
+		System.out.println("CAMERINOS B: \n");
+		System.out.println(club.showdressingRooms2());
 			break;	
+		case 10:
+		createlineup();
+			break;
+		case 11:
+		showLineup();	
+			break;		
 		default:
 			System.out.println("Error, opción no válida");
 		

@@ -85,13 +85,13 @@ public class LineUp {
                                         out=true;
                                         sentinel+=1;
                                     break;
-                                case 6: lineUp[k][1]=1;
-                                        lineUp[k][3]=1;
-                                        lineUp[k][5]=1;
+                                case 6: lineUp[k][0]=1;
+                                        lineUp[k][1]=1;
+                                        lineUp[k][2]=1;
         
-                                        lineUp[k-2][1]=1;
-                                        lineUp[k-2][3]=1;
-                                        lineUp[k-2][5]=1;
+                                        lineUp[k][4]=1;
+                                        lineUp[k][5]=1;
+                                        lineUp[k][6]=1;
                                         out=true;
                                         sentinel+=1;
                                          break;
@@ -102,39 +102,11 @@ public class LineUp {
                                         lineUp[k][4]=1;
                                         lineUp[k][5]=1;
         
-                                        lineUp[k-2][2]=1;
-                                        lineUp[k-2][4]=1;
+                                        lineUp[k][6]=1;
+                                        lineUp[k][0]=1;
                                         out=true;
                                         sentinel+=1;
                                         break;
-        
-                                case 8: lineUp[k][1]=1;
-                                        lineUp[k][2]=1;
-                                        lineUp[k][4]=1;
-                                        lineUp[k][5]=1;
-
-                                        lineUp[k-2][1]=1;
-                                        lineUp[k-2][2]=1;
-                                        lineUp[k-2][4]=1;
-                                        lineUp[k-2][5]=1;
-                                        out=true;
-                                        sentinel+=1;
-                                         break;
-        
-                                case 9: lineUp[k][1]=1;
-                                        lineUp[k][2]=1;
-                                        lineUp[k][3]=1;
-                                        lineUp[k][4]=1;
-                                        lineUp[k][5]=1;
-
-                                        lineUp[k-2][1]=1;
-                                        lineUp[k-2][2]=1;
-                                        lineUp[k-2][4]=1;
-                                        lineUp[k-2][5]=1;
-                                        out=true;
-                                        sentinel+=1;
-                                         break;
-                                   
                                         }
                               if (sentinel==positions2.length) {
                                             out=true;

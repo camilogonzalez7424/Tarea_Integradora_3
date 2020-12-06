@@ -222,6 +222,72 @@ public class Club {
     return message;
 }
 
+    public void locateInTheDressingRooms(){
+        Player[] playersLocate1 = teamA.getPlayers();
+        Player[] playersLocate2 = teamB.getPlayers();
+        boolean out1 = false;
+        for(int k = 0; k < playersLocate1.length; k++){
+            if(playersLocate1[k] != null){
+                for(int i = 0; i < dressingRooms1.length && !out1; i = i+2){
+                    for(int j = 0; j < dressingRooms1[0].length && !out1; j = j+2){
+                        if(dressingRooms1[i][j] == null){
+                            dressingRooms1[i][j] = playersLocate1[k];
+                            out1 = true;
+                        }
+                    }
+                }
+                out1 = false;
+            }
+        }
+        boolean out2 = false;
+        for(int k = 0; k < playersLocate2.length; k++){
+            if(playersLocate2[k] != null){
+                for(int i = 0; i < dressingRooms2.length && !out2; i = i+2){
+                    for(int j = 0; j < dressingRooms2[0].length && !out2; j = j+2){
+                        if(dressingRooms2[i][j] == null){
+                            dressingRooms2[i][j] = playersLocate2[k];
+                            out2 = true;
+                        }
+                    }
+                }
+                out2 = false;
+            }
+        }
+    }
+
+    public String showdressingRooms1(){
+        String matrix = "";
+        for (int i=0; i< dressingRooms1.length; i++ ) {
+            for (int j = 0; j < dressingRooms1[0].length; j++) {
+                if(dressingRooms1[i][j] != null){
+                    matrix +=dressingRooms1[i][j].getName()+"\t";
+            }
+            else{
+                matrix +="VACIO\t";
+            }
+                }
+                
+                matrix +="\n";
+            }
+            return matrix;
+    }
+
+    public String showdressingRooms2(){
+        String matrix = "";
+        for (int i=0; i< dressingRooms2.length; i++ ) {
+            for (int j = 0; j < dressingRooms2[0].length; j++) {
+                if(dressingRooms2[i][j] != null){
+                    matrix +=dressingRooms2[i][j].getName()+"\t";
+            }
+            else{
+                matrix +="VACIO\t";
+            }
+                }
+                
+                matrix +="\n";
+            }
+            return matrix;
+    }
 
 
 
